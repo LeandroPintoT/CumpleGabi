@@ -10,7 +10,7 @@
             >
                 <img v-if="item.type === 'image'" :src="item.src" loading="lazy" :alt="item.alt" />
                 <div v-else class="video-thumb">
-                    <video :src="item.src" muted playsinline preload="metadata"></video>
+                    <video :src="item.src" muted playsinline></video>
                     <div class="play-icon">▶</div>
                 </div>
             </div>
@@ -18,7 +18,7 @@
 
         <div v-if="selected" class="viewer" @click="selected = null">
             <img v-if="selected.type === 'image'" :src="selected.src" loading="lazy" />
-            <video v-else :src="selected.src" preload="metadata" autoplay controls></video>
+            <video v-else :src="selected.src" autoplay controls></video>
         </div>
     </div>
 </template>
