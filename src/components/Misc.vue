@@ -8,17 +8,17 @@
                     class="thumb"
                     @click="openViewer(item)"
             >
-                <img v-if="item.type === 'image'" :src="item.src" :alt="item.alt" />
+                <img v-if="item.type === 'image'" :src="item.src" loading="lazy" :alt="item.alt" />
                 <div v-else class="video-thumb">
-                    <video :src="item.src" muted playsinline></video>
+                    <video :src="item.src" muted playsinline preload="none"></video>
                     <div class="play-icon">▶</div>
                 </div>
             </div>
         </div>
 
         <div v-if="selected" class="viewer" @click="selected = null">
-            <img v-if="selected.type === 'image'" :src="selected.src" />
-            <video v-else :src="selected.src" autoplay controls></video>
+            <img v-if="selected.type === 'image'" :src="selected.src" loading="lazy" />
+            <video v-else :src="selected.src" preload="none" autoplay controls></video>
         </div>
     </div>
 </template>

@@ -9,7 +9,7 @@
         {{ esPantallaCompleta ? '✖️' : '⛶' }}
     </button>
     
-    <video class="video-bg" autoplay muted loop playsinline preload="metadata">
+    <video class="video-bg" autoplay muted loop playsinline preload="auto">
         <source :src="fondoVideoWebM" type="video/webm" />
         <source :src="fondoVideoMP4" type="video/mp4">
         Tu navegador no soporta videos en HTML5.

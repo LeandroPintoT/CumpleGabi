@@ -8,7 +8,7 @@
                     :key="index"
                     class="my-carousel-item"
                 >
-                    <img :src="image.src" :alt="image.alt" />
+                    <img :src="image.src" loading="lazy" :alt="image.alt" />
                     <p class="caption">{{ image.caption }}</p>
                 </div>
             </div>
